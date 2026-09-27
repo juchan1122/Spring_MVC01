@@ -67,9 +67,9 @@ public class FrontControllerServletV5 extends HttpServlet {
         MyHandlerAdapter adapter = getHandlerAdapter(handler); // handler -> // MemberFormControllerV3()
 
         // ControllerV3HandlerAdapter 클래스에 있는 handle 호출
-        ModelView mv = adapter.handle(request, response, handler);
+        ModelView mv = adapter.handle(request, response, handler); // ModelView로 반환
 
-        MyView view = viewResolver(mv.getViewName());
+        MyView view = viewResolver(mv.getViewName()); // view ->  /WEB-INF/views/new-form.jsp
         view.render(mv.getModel(), request, response);
     }
 

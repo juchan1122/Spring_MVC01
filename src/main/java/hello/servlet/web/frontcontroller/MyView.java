@@ -24,7 +24,7 @@ public class MyView {
 
     public void render(Map<String, Object> model, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         modelToRequestAttribute(model, request);
-        RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
+        RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath); // /WEB-INF/views/new-form.jsp 경로
         dispatcher.forward(request, response);
     }
 
